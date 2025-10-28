@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+$font-size-card-title: clamp(1.2rem, 1.3vw, 3rem);
 
 .category {
   height: 100%;
