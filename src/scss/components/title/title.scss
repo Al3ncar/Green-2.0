@@ -1,4 +1,5 @@
 @use "../../base/variables" as *;
+$font-size-title: clamp(5.5rem, 3vw, 3rem);
 
 .title__content {
   &--left,

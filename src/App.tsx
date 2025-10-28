@@ -6,6 +6,7 @@ import Statistics from "./layouts/main/about/statistics";
 import Category from "./layouts/main/category/category";
 import Comments from "./layouts/main/comments/comments";
 import Gallery from "./layouts/main/galery/gallery";
+import Signin from "./layouts/main/singin/signin";
 
 export default function GreenAction() {
   return (
@@ -17,6 +18,7 @@ export default function GreenAction() {
         <Category />
         <Comments />
         <Gallery />
+        <Signin />
       </main>
       {/* <footer>
         <p>© todos os direitos reservados</p>

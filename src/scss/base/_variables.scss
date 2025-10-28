@@ -2,6 +2,7 @@ $color-title: #fff;
 $color-descript-form: #767676;
 
 $bg-primary: #66bb6a;
+$bg-signin: #e8f5e9;
 $bg-secondary: #fff;
 
 $bg-card-1: #ffff006b;
@@ -14,12 +15,12 @@ $font-primary: "Reddit Sans", sans-serif;
 $font-secondary: "Roboto Serif", serif;
 
 $font-size-btn: clamp(1rem, 1vw, 3rem) !default;
-$font-size-title: clamp(8.5rem, 3vw, 3rem) !default;
-$font-size-default: clamp(1.6rem, 1vw, 3rem) !default;
-$font-size-subtitle: clamp(2rem, 1.5vw, 3rem) !default;
+$font-size-title: clamp(7.5rem, 3vw, 3rem) !default;
+$font-size-default: clamp(1.4rem, 1vw, 3rem) !default;
+$font-size-subtitle: clamp(1.6rem, 1.5vw, 3rem) !default;
 $font-size-card-title: clamp(1.5rem, 1.5vw, 3rem) !default;
-$font-size-statistics: clamp(4rem, 1.5vw, 3rem) !default;
-$font-size-component-subtitle: clamp(2.4rem, 1.5vw, 3rem) !default;
+$font-size-statistics: clamp(3rem, 1.5vw, 3rem) !default;
+$font-size-component-subtitle: clamp(2rem, 1.5vw, 3rem) !default;
 
 $animation-tooltip: tooltip 2s ease-in-out forwards;
 
