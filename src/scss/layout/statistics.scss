@@ -1,0 +1,37 @@
+@use "../base/variables" as *;
+
+.data__main {
+  @include flex-around;
+  background-color: $bg-primary;
+  padding: 2% 0;
+
+  div {
+    padding: 0 3%;
+    a {
+      @include flex-around;
+      color: $color-title;
+      text-decoration: none;
+
+      p {
+        width: 50%;
+      }
+      p:first-child {
+        font-size: $font-size-statistics;
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      border-left: solid 1px $bg-secondary;
+      border-right: solid 1px $bg-secondary;
+    }
+
+    &:hover {
+      a {
+        p:last-child {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

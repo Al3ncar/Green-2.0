@@ -1,0 +1,163 @@
+$color-title: #fff;
+$color-descript-form: #767676;
+
+$bg-primary: #66bb6a;
+$bg-secondary: #fff;
+
+$bg-card-1: #ffff006b;
+$bg-card-2: #00ff2682;
+$bg-card-3: #ff000082;
+$bg-card-4: #cc00ff82;
+$bg-card-5: #000dff82;
+
+$font-primary: "Reddit Sans", sans-serif;
+$font-secondary: "Roboto Serif", serif;
+
+$font-size-btn: clamp(1rem, 1vw, 3rem) !default;
+$font-size-title: clamp(8.5rem, 3vw, 3rem) !default;
+$font-size-default: clamp(1.6rem, 1vw, 3rem) !default;
+$font-size-subtitle: clamp(2rem, 1.5vw, 3rem) !default;
+$font-size-card-title: clamp(1.5rem, 1.5vw, 3rem) !default;
+$font-size-statistics: clamp(4rem, 1.5vw, 3rem) !default;
+$font-size-component-subtitle: clamp(2.4rem, 1.5vw, 3rem) !default;
+
+$animation-tooltip: tooltip 2s ease-in-out forwards;
+
+@mixin center-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin bg-seetings {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin bg-banner-header {
+  background: url("../../assets/pictures/background_green.jpg");
+  background-size: cover;
+}
+@mixin bg-banner-about {
+  background: url("../../assets/pictures/about/about_(2).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin btn-seetings {
+  color: $color-title;
+  background-color: $bg-primary;
+  font-size: $font-size-btn;
+  border: none;
+  padding: 1% 2%;
+  border-radius: 2vw;
+  cursor: pointer;
+
+  position: relative;
+
+  &::before {
+    z-index: -2;
+    position: absolute;
+    border-radius: 2vw;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &:hover::before {
+    width: 100%;
+    opacity: 1;
+    transition: 1s;
+    border: solid 1px $bg-primary;
+  }
+
+  z-index: 999;
+
+  &:hover {
+    color: #66bb6a;
+    transition: 1s;
+  }
+}
+
+@mixin comments-card {
+  width: 27%;
+  border: solid 2px $bg-primary;
+  padding: 2%;
+  backdrop-filter: blur(45px);
+
+  figure {
+    @include flex-start;
+    width: 100%;
+
+    picture {
+      width: 20%;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    figcaption {
+      padding-left: 5%;
+
+      .card--title,
+      .card--subtitle {
+        font-weight: 600;
+        color: $bg-primary;
+      }
+
+      .card--title {
+        font-size: $font-size-subtitle;
+      }
+      .card--subtitle {
+        font-size: $font-size-default;
+      }
+    }
+  }
+
+  &__parg {
+    padding: 3.5% 0;
+    color: $bg-primary;
+  }
+
+  &__avaliation {
+    width: 100%;
+    @include flex-between;
+
+    p:first-child {
+      color: $bg-primary;
+    }
+
+    p:last-child {
+      opacity: 80%;
+      cursor: pointer;
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}

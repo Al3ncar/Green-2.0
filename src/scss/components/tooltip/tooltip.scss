@@ -1,0 +1,41 @@
+@use "../../base/variables" as *;
+
+.tooltip {
+  position: relative;
+
+  &__content {
+    width: 10vw;
+    padding: 30% 60%;
+
+    position: absolute;
+    bottom: calc(100% + 2vh);
+    right: -65%;
+
+    background-color: $bg-secondary;
+    border-radius: 2vw;
+    text-align: center;
+
+    animation: AnimTooltip 0.5s ease-in-out forwards;
+
+    &::before {
+      content: "";
+      border-top: 0.6vw solid $bg-secondary;
+      border-right: 0.6vw solid transparent;
+      border-bottom: 0.6vw solid transparent;
+      border-left: 0.6vw solid transparent;
+      position: absolute;
+      animation: AnimTooltip 0.5s ease-in-out forwards;
+      top: 100%;
+      right: 13%;
+    }
+  }
+}
+
+@keyframes AnimTooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

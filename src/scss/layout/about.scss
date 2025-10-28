@@ -1,0 +1,63 @@
+@use "../base/variables" as *;
+
+.about {
+  @include flex-between;
+  position: relative;
+  margin: 6% 0 9% 0;
+
+  &__content {
+    z-index: 2;
+    width: 45%;
+    padding: 5% 2% 5% 5%;
+    margin-top: 5%;
+
+    &--picture {
+      width: 1%;
+      img {
+        width: 95%;
+      }
+    }
+  }
+
+  &__description {
+    width: 87%;
+    background-color: #ffffff;
+
+    &--parg {
+      width: 52.8%;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 2% 0;
+    }
+  }
+
+  &::before {
+    @include bg-banner-about;
+    content: "";
+    width: 26%;
+    height: 90%;
+
+    background-position: center;
+
+    opacity: 40%;
+    position: absolute;
+    top: 10%;
+    margin: 0;
+  }
+
+  &::after {
+    @include bg-banner-about;
+    background-position: 90%;
+
+    opacity: 40%;
+    content: "";
+    width: 20%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    margin: 0;
+
+    background-color: #ffffff;
+  }
+}

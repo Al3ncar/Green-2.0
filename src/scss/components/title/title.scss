@@ -1,0 +1,40 @@
+@use "../../base/variables" as *;
+
+.title__content {
+  &--left,
+  &--center,
+  &--right {
+    &--top,
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        color: #cccccc;
+        font-size: $font-size-title;
+      }
+
+      p {
+        font-size: $font-size-component-subtitle;
+        font-weight: bolder;
+      }
+    }
+
+    &--bottom {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--center {
+    &--bottom,
+    &--top {
+      @include flex-center;
+    }
+  }
+
+  &--right {
+    &--bottom,
+    &--top {
+      text-align: right;
+    }
+  }
+}

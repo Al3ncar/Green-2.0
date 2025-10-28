@@ -1,0 +1,46 @@
+@use "../base/variables" as *;
+
+.comments {
+  @include flex-center;
+  flex-direction: column;
+  position: relative;
+  padding: 5% 0;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    background-image: url("../../assets/pictures/plant_banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 20%;
+  }
+  &::after {
+    right: 0;
+    transform: rotate(180deg);
+  }
+  &::before {
+    left: 0;
+  }
+
+  &__cards {
+    position: relative;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 5;
+
+    .card {
+      @include comments-card;
+    }
+  }
+
+  button {
+    @include btn-seetings;
+  }
+}
