@@ -36,6 +36,9 @@
 
     .card {
       @include comments-card;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
