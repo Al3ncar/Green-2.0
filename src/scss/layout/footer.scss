@@ -1,0 +1,171 @@
+@use "../base/variables" as *;
+
+.footer {
+  background-color: $bg-primary;
+  color: $color-title;
+  padding: 3rem 2rem 1rem;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    padding: 2%;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__section {
+    h2,
+    h3 {
+      margin-bottom: 1rem;
+      color: $color-title;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.6;
+      color: lighten($color-title, 20%);
+    }
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: lighten($color-title, 30%);
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    a {
+      @include flex-center;
+      width: 10%;
+      border-radius: 50%;
+      color: $color-title;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      svg {
+        font-size: $font-size-component-subtitle;
+      }
+    }
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    a {
+      color: lighten($color-title, 20%);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-title;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: 1.5rem;
+
+    .contact__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+      color: lighten($color-title, 20%);
+
+      a {
+        color: $color-title;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      svg {
+        font-size: 1rem;
+        color: $color-title;
+      }
+    }
+  }
+
+  &__volunteer-btn {
+    background-color: $bg-secondary;
+    color: $bg-primary;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: lighten($bg-secondary, 10%);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__bottom {
+    @include flex-between;
+    border-top: 1px solid $bg-secondary;
+    padding: 2%;
+    color: lighten($color-title, 30%);
+    font-size: 0.9rem;
+
+    .footer__links {
+      @include flex-between;
+      width: 15%;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+
+      a {
+        color: lighten($color-title, 20%);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-title;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

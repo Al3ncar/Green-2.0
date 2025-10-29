@@ -7,6 +7,7 @@ import Category from "./layouts/main/category/category";
 import Comments from "./layouts/main/comments/comments";
 import Gallery from "./layouts/main/galery/gallery";
 import Signin from "./layouts/main/singin/signin";
+import Footer from "./layouts/footer/footer";
 
 export default function GreenAction() {
   return (
@@ -20,9 +21,7 @@ export default function GreenAction() {
         <Gallery />
         <Signin />
       </main>
-      {/* <footer>
-        <p>© todos os direitos reservados</p>
-      </footer> */}
+      <Footer />
     </>
   );
 }
