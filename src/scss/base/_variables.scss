@@ -5,11 +5,11 @@ $bg-primary: #66bb6a;
 $bg-signin: #e8f5e9;
 $bg-secondary: #fff;
 
-$bg-card-1: #ffff006b;
-$bg-card-2: #00ff2682;
-$bg-card-3: #ff000082;
-$bg-card-4: #cc00ff82;
-$bg-card-5: #000dff82;
+$bg-card-1: #a0800d67;
+$bg-card-2: #50592467;
+$bg-card-3: #09356367;
+$bg-card-4: #45352A67;
+$bg-card-5: #ffffff67;
 
 $font-primary: "Reddit Sans", sans-serif;
 $font-secondary: "Roboto Serif", serif;
@@ -23,6 +23,12 @@ $font-size-statistics: clamp(3rem, 1.5vw, 3rem) !default;
 $font-size-component-subtitle: clamp(2rem, 1.5vw, 3rem) !default;
 
 $animation-tooltip: tooltip 2s ease-in-out forwards;
+
+@mixin hover-card {
+  transform: scale(1.5);
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
 
 @mixin center-elements {
   display: flex;
@@ -141,12 +147,12 @@ $animation-tooltip: tooltip 2s ease-in-out forwards;
     }
   }
 
-  &__parg {
+  .card__parg {
     padding: 3.5% 0;
     color: $bg-primary;
   }
 
-  &__avaliation {
+  .card__avaliation {
     width: 100%;
     @include flex-between;
 
@@ -161,5 +167,124 @@ $animation-tooltip: tooltip 2s ease-in-out forwards;
         opacity: 100%;
       }
     }
+  }
+}
+
+// @mixin card-active {
+  
+//   position: relative;
+//   margin-top: 2%;
+//   z-index: 0;
+  
+//   .picture__card {
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 5vw;
+//     overflow: hidden;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+//     picture,
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//     }
+//   }
+  
+//   .context__card {
+//     display: flex;
+//     width: 70%;
+//     height: 40%;
+//     align-items: center;
+//     flex-direction: column;
+    
+//     box-shadow: 1px 1px 2px #000;
+//     text-align: center;
+//     position: absolute;
+//     background-color: $bg-secondary;
+//     top: 100%;
+
+//     // left: 0;
+//     border-radius: 1vw;
+//     z-index: 4;
+//     padding: 4%;
+//     padding-top: 2%;
+//     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+//     &--title {
+//       width: 100%;
+//       // color: $color-title;
+//       font-size: $font-size-card-title;
+//       font-weight: bold;
+//       transition: all 0.3s ease-in-out;
+//     }
+
+//     &--description {
+//       width: 60%;
+//       opacity: 1;
+//       // color: $color-title;
+//       font-size: $font-size-btn;
+//       padding-bottom: 5%;
+//       transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//     }
+//   }
+
+//   &.__expand {
+//     // .context__card--description {
+//     //   opacity: 1;
+//     //   transform: translateY(0);
+//     //   transition-delay: 0.2s;
+//     // }
+
+//     .picture__card {
+//       transform: scale(1.1);
+//     }
+//   }
+
+//   &:not(.animating):hover {
+//     cursor: pointer;
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       z-index: 2;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: 0.5vw;
+//       animation: cardMove ease-in-out 0.5s forwards;
+//     }
+
+//     .context__card--description {
+//       // animation: cardMoveText ease-in-out 0.5s forwards;
+//     }
+//   }
+// }
+
+@keyframes cardMove {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cardMoveText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
