@@ -4,13 +4,10 @@ import commentsCard from "../../../utils/data/comments.data";
 
 export default function Comments() {
   const [quantityCard, setQuantityCard] = useState<number>(3);
-
-  const seeAllCard = () => {
-    quantityCard === commentsCard.length
-      ? setQuantityCard(3)
-      : setQuantityCard(commentsCard.length);
+  const classSplit = (cardNumber: number) => {
+    const quantityCard = cardNumber + 1;
+    return quantityCard > 3 ? "right" : "left";
   };
-
   return (
     <section className="comments">
       <Title
@@ -20,9 +17,12 @@ export default function Comments() {
         orientation="bottom"
       />
       <section className="comments__cards">
-        {commentsCard.slice(0, quantityCard).map((card) => {
+        {commentsCard.map((card, index) => {
           return (
-            <div key={card.id} className={`comments__cards card`}>
+            <div
+              key={card.id}
+              className={`comments__cards card__${classSplit(index)}`}
+            >
               <figure>
                 <picture>
                   <img
@@ -46,9 +46,6 @@ export default function Comments() {
           );
         })}
       </section>
-      <button onClick={() => seeAllCard()}>
-        {quantityCard === 3 ? "Ver mais..." : "Ver menos"}
-      </button>
     </section>
   );
 }
