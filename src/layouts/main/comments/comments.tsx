@@ -9,7 +9,7 @@ export default function Comments() {
     return quantityCard > 3 ? "right" : "left";
   };
   return (
-    <section className="comments">
+    <section className="comments" id="VOLUNTÁRIOS">
       <Title
         title="VOLUNTÁRIOS"
         subtitle="NOSSOS"

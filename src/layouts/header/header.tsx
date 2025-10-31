@@ -1,6 +1,4 @@
-import { IoSunny } from "react-icons/io5";
-import Tooltip from "../../components/tooltip/tooltip";
-
+import { Link } from "react-scroll";
 export default function Header() {
   return (
     <header>
@@ -14,14 +12,14 @@ export default function Header() {
             reais!
           </p>
         </div>
-        <button className="header__content--btn">Quero ser voluntário</button>
-        <div className="header__content--theme">
-          <Tooltip description="Mudança de Tema">
-            <button className="header__content--theme--btn">
-              <IoSunny />
-            </button>
-          </Tooltip>
-        </div>
+        <Link
+          className="header__content--btn"
+          to="VOLUNTÁRIOS"
+          smooth={true}
+          duration={6000}
+        >
+          Quero ser voluntário
+        </Link>
       </section>
     </header>
   );

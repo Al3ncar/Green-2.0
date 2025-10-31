@@ -23,7 +23,7 @@ export default function Category() {
     cardSeeNumber === index + 1 ? "__expand" : "";
 
   return (
-    <section className="category">
+    <section className="category" id="ATIVIDADES">
       <div className="category__content">
         <Title
           title="ATIVIDADES"

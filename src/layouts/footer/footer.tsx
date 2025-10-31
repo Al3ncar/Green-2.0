@@ -5,6 +5,7 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -33,16 +34,24 @@ export default function Footer() {
           <h3>Navegue</h3>
           <ul className="footer__links">
             <li>
-              <a href="#">Sobre</a>
+              <Link to="SOBRE" smooth={true} duration={2000}>
+                Sobre
+              </Link>
             </li>
             <li>
-              <a href="#">Nossas ações</a>
+              <Link to="ATIVIDADES" smooth={true} duration={2000}>
+                Nossas ações
+              </Link>
             </li>
             <li>
-              <a href="#">Galeria</a>
+              <Link to="AÇÕES" smooth={true} duration={2000}>
+                Galeria
+              </Link>
             </li>
             <li>
-              <a href="#">Depoimentos</a>
+              <Link to="VOLUNTÁRIOS" smooth={true} duration={2000}>
+                Depoimentos
+              </Link>
             </li>
           </ul>
         </div>
