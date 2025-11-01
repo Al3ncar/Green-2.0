@@ -7,7 +7,7 @@ import Card5 from "../../assets/pictures/cards/card_5.jpg";
 const categoryCard = [
   {
     id: 1,
-    title: "PLANTIO DE MUDAS",
+    title: "MUDAS DE GIRASSOL",
     description:
       "Participe dos nossos mutirões e ajude a reflorestar áreas degradadas. Cada árvore que plantamos é um passo vital para restaurar a biodiversidade, proteger nascentes e garantir um ar mais puro para nossas cidades.",
     picture: Card1,
@@ -24,7 +24,7 @@ const categoryCard = [
   },
   {
     id: 3,
-    title: "MAPEAMENTO",
+    title: "MAPEANDO AREAS VERDES",
     description:
       "Não podemos proteger o que não conhecemos. Nossa equipe de campo identifica e cataloga áreas de risco, pontos de descarte irregular e locais que precisam de reflorestamento urgente, para que nossas ações sejam sempre estratégicas.",
     picture: Card3,
