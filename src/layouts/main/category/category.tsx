@@ -61,9 +61,7 @@ export default function Category() {
                 onClick={() => clickInCard(card.id)}
               >
                 <div className="picture__card">
-                  <picture>
-                    <img src={card.picture} alt={card.altPicture} />
-                  </picture>
+                  <img src={card.picture} alt={card.altPicture} />
                 </div>
 
                 {hasExpanded(index) === "__expand" && (
