@@ -35,11 +35,6 @@
       font-size: 1.2rem;
       font-weight: 600;
     }
-
-    p {
-      line-height: 1.6;
-      color: lighten($color-title, 20%);
-    }
   }
 
   &__logo {
@@ -47,10 +42,6 @@
 
     h2 {
       margin-bottom: 0.5rem;
-    }
-
-    p {
-      color: lighten($color-title, 30%);
     }
   }
 
@@ -73,6 +64,10 @@
       svg {
         font-size: $font-size-component-subtitle;
       }
+      &:hover {
+        transform: scale(1.4);
+        transition: 0.5s;
+      }
     }
   }
 
@@ -85,7 +80,8 @@
     }
 
     a {
-      color: lighten($color-title, 20%);
+      // color: lighten($color-title, 20%);
+      color: $color-title;
       text-decoration: none;
       transition: color 0.3s ease;
 
@@ -104,7 +100,8 @@
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 0.8rem;
-      color: lighten($color-title, 20%);
+      // color: lighten($color-title, 20%);
+      color: $color-title;
 
       a {
         color: $color-title;
@@ -134,7 +131,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: lighten($bg-secondary, 10%);
+      background-color: $bg-secondary;
       transform: translateY(-2px);
     }
   }
@@ -143,7 +140,8 @@
     @include flex-between;
     border-top: 1px solid $bg-secondary;
     padding: 2%;
-    color: lighten($color-title, 30%);
+    color: $color-title;
+
     font-size: 0.9rem;
 
     .footer__links {
@@ -157,7 +155,7 @@
       }
 
       a {
-        color: lighten($color-title, 20%);
+        color: $color-title;
         text-decoration: none;
         transition: color 0.3s ease;
 
