@@ -52,43 +52,41 @@ export default function Signin() {
         pode gerar grandes impactos na natureza e na comunidade
       </p>
 
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Nome completo"
-            title="Por favor, insira o nome completo válido"
-            pattern="^[A-Za-zÀ-ÿ\s]{2,}(?:\s+[A-Za-zÀ-ÿ\s]{2,})+$"
-            required
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-            title="Por favor, insira um email válido"
-            required
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="cidade"
-            placeholder="Cidade"
-            title="Por favor, insira sua cidade"
-            required
-            value={formData.cidade}
-            onChange={handleInputChange}
-          />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Nome completo"
+          title="Por favor, insira o nome completo válido"
+          pattern="^[A-Za-zÀ-ÿ\s]{2,}(?:\s+[A-Za-zÀ-ÿ\s]{2,})+$"
+          required
+          value={formData.name}
+          onChange={handleInputChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          title="Por favor, insira um email válido"
+          required
+          value={formData.email}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="cidade"
+          placeholder="Cidade"
+          title="Por favor, insira sua cidade"
+          required
+          value={formData.cidade}
+          onChange={handleInputChange}
+        />
 
-          <CustomSelect options={atividades} />
+        <CustomSelect options={atividades} />
 
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
+        <button type="submit">Cadastrar</button>
+      </form>
     </section>
   );
 }
