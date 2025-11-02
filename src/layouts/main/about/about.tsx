@@ -6,9 +6,9 @@ export default function About() {
   return (
     <section className="about" id="SOBRE">
       <div className="about__content">
-        <picture className="about__content--picture">
+        <div className="about__content--picture">
           <img src={Backbanner} alt="Plantação de milhos no fundo" />
-        </picture>
+        </div>
       </div>
       <div className="about__description">
         <Title title="SOBRE" subtitle="PLANTANDO O FUTURO HOJE" />
