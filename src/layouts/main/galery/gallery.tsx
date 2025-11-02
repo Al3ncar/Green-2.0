@@ -96,7 +96,6 @@ export default function Gallery() {
         {galleryPagination?.map((src, i) => (
           <div key={i} className={`item item-${i + 1}`}>
             <img src={src} alt={`Foto ${i + 1}`} />
-            <p style={{ fontSize: "45px" }}>{i}</p>
           </div>
         ))}
       </div>
