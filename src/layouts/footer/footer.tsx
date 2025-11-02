@@ -76,12 +76,8 @@ export default function Footer() {
         <p>&copy; 2025 Verde ação. Todos os direitos reservados</p>
 
         <ul className="footer__links">
-          <li>
-            <a href="#">Política de Privacidade</a>
-          </li>
-          <li>
-            <a href="#">Termos de uso</a>
-          </li>
+          <li>Política de Privacidade</li>
+          <li>Termos de uso</li>
         </ul>
       </div>
     </footer>

@@ -12,12 +12,13 @@ header {
 
     height: 100%;
     flex-direction: column;
-    padding: 9.5% 0 2% 0;
+    padding: 9.5% 0 6% 0;
 
     &--parg {
       color: $color-title;
       font-size: $font-size-subtitle;
       font-weight: 700;
+      animation: pargRight 3s ease-in-out forwards;
     }
 
     h1 {
@@ -25,17 +26,16 @@ header {
       font-family: $font-secondary;
       color: $color-title;
       margin-bottom: 2%;
-      animation: stitle 1s ease-in-out forwards;
+      animation: titleLeft 1s ease-in-out forwards;
     }
 
     &--description {
-      text-align: center;
+      @include center-elements;
       width: 100%;
       margin-bottom: 5%;
       animation: title 1s ease-out forwards;
 
       p {
-        display: inline-block;
         width: 47%;
         font-size: $font-size-default;
         text-align: center;
@@ -47,30 +47,88 @@ header {
       @include btn-seetings;
       padding: 1.5% 4%;
     }
+  }
+}
 
-    &--theme {
-      width: 100%;
-      padding: 1% 4% 0 0;
-      display: flex;
-      justify-content: end;
+@keyframes pargRight {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes titleLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 
-      &--btn {
-        font-size: $font-size-subtitle;
-        color: $color-title;
-        background: transparent;
-        // background: red;
-        border: none;
-        cursor: pointer;
-
-        &:hover {
-          transform: scale(1.1);
-          transition: 0.2s;
+@media (max-width: 1024px) {
+  header {
+    .header__content {
+      &--description {
+        p {
+          width: 75%;
+          font-size: 1.8vw;
         }
       }
     }
   }
+}
+@media (max-width: 800px) {
+  header {
+    height: 85vh;
+    .header__content {
+      &--parg {
+        font-size: 2.8vw;
+      }
+      h1 {
+        font-size: 9vw;
+      }
+      &--description {
+        p {
+          width: 75%;
+          font-size: 2vw;
+        }
+      }
 
-  //   .header-description {
-
-  //   }
+      &--btn {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 87vh;
+    .header__content {
+      @include flex-around;
+      &--parg {
+        font-size: 5vw;
+      }
+      h1 {
+        font-size: 14vw;
+        margin-bottom: 0%;
+      }
+      &--description {
+        p {
+          width: 75%;
+          font-size: 4vw;
+        }
+      }
+      
+      &--btn {
+        font-size: 4vw;
+        padding: 4% 9%;
+      }
+    }
+  }
 }

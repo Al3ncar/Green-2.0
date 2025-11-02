@@ -55,3 +55,40 @@ $font-size-title: clamp(5.5rem, 3vw, 3rem);
     }
   }
 }
+
+@media (max-width: 1300px) {
+  .title__content {
+    &--left,
+    &--center,
+    &--right {
+      &--top,
+      &--bottom {
+        h2 {
+          font-size: 6vw;
+        }
+
+        p {
+          font-size: 2.2vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .title__content {
+    &--left,
+    &--center,
+    &--right {
+      &--top,
+      &--bottom {
+        h2 {
+          font-size: 9vw;
+        }
+
+        p {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+}
