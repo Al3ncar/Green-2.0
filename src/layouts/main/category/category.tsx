@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Title from "../../../components/title/title";
 import categoryCard from "../../../utils/data/category.data";
-import { FaInfoCircle } from "react-icons/fa";
 import { PiPlantFill } from "react-icons/pi";
 
 export default function Category() {

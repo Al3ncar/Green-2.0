@@ -1,5 +1,3 @@
-import React from "react";
-
 import Header from "./layouts/header/header";
 import About from "./layouts/main/about/about";
 import Statistics from "./layouts/main/about/statistics";

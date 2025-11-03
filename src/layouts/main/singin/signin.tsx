@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "../../../components/title/title";
 import CustomSelect from "../../../components/custom-select/customSelect";
 
-const atividades = [
+const actives = [
   { label: "Plantio de Mudas", value: "plantio" },
   { label: "Limpeza de Praia e Parques", value: "limpeza" },
   { label: "Educação e Oficinas de Reciclagem", value: "educacao" },
@@ -21,13 +21,6 @@ export default function Signin() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSelectChange = (name: string, value: string) => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -83,9 +76,10 @@ export default function Signin() {
           onChange={handleInputChange}
         />
 
-        <CustomSelect options={atividades} />
-
-        <button type="submit">Cadastrar</button>
+        <CustomSelect options={actives} />
+        <a href="https://www.linkedin.com/in/igoralencar/" target="_blank">
+          <button type="submit">Cadastrar</button>
+        </a>
       </form>
     </section>
   );

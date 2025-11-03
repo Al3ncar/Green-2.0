@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Title from "../../../components/title/title";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 

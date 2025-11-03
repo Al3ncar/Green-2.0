@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 
 type Option = {

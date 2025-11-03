@@ -1,4 +1,4 @@
-import React, { useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 
 interface ITooltip {
   isOpen?: Boolean;
@@ -12,11 +12,9 @@ interface ITooltip {
 export default function Tooltip({
   isOpen,
   children,
-  type,
   title,
   description,
-  orientation,
-}: ITooltip) {
+                }: ITooltip) {
   const [isOpenTooltip, setOpenTooltip] = useState<Boolean>(isOpen || false)
   const changeOpenTooltip = () => setOpenTooltip(true)
   const changeCloseTooltip = () => setOpenTooltip(false)

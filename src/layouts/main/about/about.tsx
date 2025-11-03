@@ -1,4 +1,3 @@
-import React from "react";
 import Backbanner from "../../../assets/pictures/about/about_(1).jpg";
 import Title from "../../../components/title/title";
 

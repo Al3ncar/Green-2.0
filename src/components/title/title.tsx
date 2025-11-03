@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 interface ITitle {
   id?: string;
@@ -14,7 +14,6 @@ const Title = ({
   title,
   subtitle,
   align = "left",
-  mode = "light",
   orientation = "top",
 }: ITitle) => {
   return (
