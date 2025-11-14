@@ -36,32 +36,22 @@ export default function Statistics() {
     },
   ];
 
+  const changeResponsiveStatistics = () => {
+    if (window.innerWidth > 1024) return 3;
+    else if (window.innerWidth > 800 && window.innerWidth < 1024) return 2;
+    else return 1;
+  };
+
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: changeResponsiveStatistics(),
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 1000,
     pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   return (
